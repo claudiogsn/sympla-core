@@ -121,7 +121,7 @@ async function buscar(eventoId, termo, limit = 10) {
     const t = `%${String(termo || '').trim()}%`;
     const lim = Math.min(Math.max(Number(limit) || 10, 1), 50);
     const [rows] = await pool.query(
-        `SELECT id, ticket_number, ticket_num_qr_code, nome, ticket_name, checkin_status
+        `SELECT *
        FROM participantes
       WHERE evento_id = ?
         AND (nome LIKE ? OR email LIKE ? OR ticket_number LIKE ?)
