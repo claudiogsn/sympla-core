@@ -68,7 +68,8 @@ async function upsertParticipantes(eventoId, listaCrua) {
                                       ticket_num_qr_code = VALUES(ticket_num_qr_code),
                                       nome        = VALUES(nome),
                                       email       = VALUES(email),
-                                      ticket_name = VALUES(ticket_name)`,
+                                      ticket_name = VALUES(ticket_name),
+                                      checkin_status = VALUES(checkin_status)`,
                 valores
             );
         }
